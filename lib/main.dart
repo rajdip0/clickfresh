@@ -7,6 +7,9 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(title: 'ClickFresh', home: HomeScreen());
+    return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'ClickFresh',
+        home: HomeScreen());
   }
 }
