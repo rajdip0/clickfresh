@@ -12,6 +12,8 @@ class TypesOfSteaks extends StatefulWidget {
 class _TypesOfSteaks extends State<TypesOfSteaks> {
   @override
   Widget build(BuildContext context) {
+     var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -78,12 +80,12 @@ class _TypesOfSteaks extends State<TypesOfSteaks> {
                         Text(
                           name,
                           style: GoogleFonts.notoSans(
-                              fontSize: 15.0, fontWeight: FontWeight.w700),
+                              fontSize: 13.0, fontWeight: FontWeight.w700),
                         ),
                         Text(
                           "Net wt." + netWet + " gms",
                           style: GoogleFonts.notoSans(
-                              fontSize: 14.0, fontWeight: FontWeight.w400),
+                              fontSize: 11.0, fontWeight: FontWeight.w400),
                         ),
                         SizedBox(
                           height: 10.0,

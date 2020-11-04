@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                 height: double.infinity,
                 child: VStack([
                   SizedBox(
-                    height: height * 0.08,
+                    height: height * 0.05,
                   ),
                   Row(
                     children: [
@@ -59,9 +59,9 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.white,
                             ),
                             SizedBox(
-                              width: width * 0.01,
+                              width: width * 0.0,
                             ),
-                            "Kolkata city.."
+                            "Kolkata city"
                                 .text
                                 .color(Colors.white)
                                 .fontFamily("Poppins")

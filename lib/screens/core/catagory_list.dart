@@ -6,62 +6,64 @@ import 'package:velocity_x/velocity_x.dart';
 class CatagoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFFfcbe03),
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
-        child: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0.0,
-          leading: IconButton(
-            icon: Container(
-              height: 50.0,
-              width: 50.0,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Color(0xFFfcbe03),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(60.0),
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0.0,
+            leading: IconButton(
+              icon: Container(
+                height: 50.0,
+                width: 50.0,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Colors.black,
+                ).px16(),
               ),
-              child: Icon(
-                Icons.arrow_back_ios,
-                color: Colors.black,
-              ).px16(),
+              onPressed: () => navigator.pop(),
             ),
-            onPressed: () => navigator.pop(),
-          ),
-          title: Text(
-            "Steak",
-            style: TextStyle(color: Colors.black),
+            title: Text(
+              "Steak",
+              style: TextStyle(color: Colors.black),
+            ),
           ),
         ),
-      ),
-      body: Container(
-        padding: EdgeInsets.all(20.0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0)),
-        ),
-        child: ListView(
-          children: <Widget>[
-            Container(
-                height: 100.0,
-                width: 40.0,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    _buildListItem("Packaging", "Temper Proof",
-                        "assets/images/packing.png"),
-                    _buildListItem("Delivery", "Express 2 Hours",
-                        "assets/images/delvary2.jpg")
-                  ],
-                )),
-            SizedBox(
-              height: 20.0,
-            ),
-            TypesOfSteaks(
-              title: "16 types of Steaks",
-            ),
-          ],
+        body: Container(
+          padding: EdgeInsets.all(20.0),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0)),
+          ),
+          child: ListView(
+            children: <Widget>[
+              Container(
+                  height: 100.0,
+                  width: 40.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      _buildListItem("Packaging", "Temper Proof",
+                          "assets/images/packing.png"),
+                      _buildListItem("Delivery", "Express 2 Hours",
+                          "assets/images/delvary2.jpg")
+                    ],
+                  )),
+              SizedBox(
+                height: 20.0,
+              ),
+              TypesOfSteaks(
+                title: "16 types of Steaks",
+              ),
+            ],
+          ),
         ),
       ),
     );
