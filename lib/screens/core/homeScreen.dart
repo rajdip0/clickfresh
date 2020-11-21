@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:clickfresh/screens/profile/Profile_Screen.dart';
 
 import 'package:clickfresh/utils/constant.dart';
 import 'package:clickfresh/widgets/types_Of_steak.dart';
@@ -77,7 +78,12 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(
                         width: width * 0.475,
                       ),
-                      "assets/images/av.png".circularAssetImage().w10(context)
+                      InkWell(
+                        onTap: (){
+                          Get.to(MainProfile());
+                        },
+                        child: "assets/images/av.png".circularAssetImage().w10(context),
+                      )
                     ],
                   ),
                   SizedBox(
@@ -299,138 +305,138 @@ class HomeScreen extends StatelessWidget {
                         "Meat".text.semiBold.fontFamily("Poppins").make()
                       ],
                     ),
-                    SizedBox(
-                      width: width * 0.06,
-                    ),
+                    // SizedBox(
+                    //   width: width * 0.06,
+                    // ),
                   ]).scrollHorizontal(),
-                  SizedBox(
-                    height: height * 0.04,
-                  ),
-                  "Order Again"
-                      .text
-                      .bold
-                      .size(width * 0.04)
-                      .fontFamily("Poppins")
-                      .make()
-                      .box
-                      .margin(EdgeInsets.only(left: width * 0.06))
-                      .make(),
-                  SizedBox(
-                    height: height * 0.02,
-                  ),
-                  HStack([
-                    SizedBox(
-                      width: width * 0.06,
-                    ),
-                    Container(
-                        child: Row(
-                      children: [
-                        Container(
-                          width: width * 0.2,
-                          height: height * 0.1,
-                          decoration: BoxDecoration(
-                              color: Color(0xFFF94e4f9),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10))),
-                          child: Image.asset(
-                            "assets/images/chicken.png",
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        SizedBox(
-                          width: width * 0.04,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            "Chicken Drumstick".text.bold.make(),
-                            SizedBox(
-                              height: height * 0.01,
-                            ),
-                            "Pieces 5-7".text.semiBold.make(),
-                            SizedBox(
-                              height: height * 0.02,
-                            ),
-                            "Ordered 2 days ago".text.tight.teal500.make(),
-                          ],
-                        )
-                      ],
-                    )),
-                    SizedBox(
-                      width: width * 0.06,
-                    ),
-                    Container(
-                        child: Row(
-                      children: [
-                        Container(
-                          width: width * 0.2,
-                          height: height * 0.1,
-                          decoration: BoxDecoration(
-                              color: Color(0xFFF94e4f9),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10))),
-                          child: Image.asset(
-                            "assets/images/chicken.png",
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        SizedBox(
-                          width: width * 0.04,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            "Chicken Drumstick".text.bold.make(),
-                            SizedBox(
-                              height: height * 0.01,
-                            ),
-                            "Pieces 5-7".text.semiBold.make(),
-                            SizedBox(
-                              height: height * 0.02,
-                            ),
-                            "Ordered 2 days ago".text.tight.teal500.make(),
-                          ],
-                        )
-                      ],
-                    )),
-                    SizedBox(
-                      width: width * 0.06,
-                    ),
-                    Container(
-                        child: Row(
-                      children: [
-                        Container(
-                          width: width * 0.2,
-                          height: height * 0.1,
-                          decoration: BoxDecoration(
-                              color: Color(0xFFF94e4f9),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10))),
-                          child: Image.asset(
-                            "assets/images/chicken.png",
-                            fit: BoxFit.contain,
-                          ),
-                        ),
-                        SizedBox(
-                          width: width * 0.04,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            "Chicken Drumstick".text.bold.make(),
-                            SizedBox(
-                              height: height * 0.01,
-                            ),
-                            "Pieces 5-7".text.semiBold.make(),
-                            SizedBox(
-                              height: height * 0.02,
-                            ),
-                            "Ordered 2 days ago".text.tight.teal500.make(),
-                          ],
-                        )
-                      ],
-                    )),
-                  ]).scrollHorizontal(),
+                  // SizedBox(
+                  //   height: height * 0.04,
+                  // ),
+                  // "Order Again"
+                  //     .text
+                  //     .bold
+                  //     .size(width * 0.04)
+                  //     .fontFamily("Poppins")
+                  //     .make()
+                  //     .box
+                  //     .margin(EdgeInsets.only(left: width * 0.06))
+                  //     .make(),
+                  // SizedBox(
+                  //   height: height * 0.02,
+                  // ),
+                  // HStack([
+                  //   SizedBox(
+                  //     width: width * 0.06,
+                  //   ),
+                  //   Container(
+                  //       child: Row(
+                  //     children: [
+                  //       Container(
+                  //         width: width * 0.2,
+                  //         height: height * 0.1,
+                  //         decoration: BoxDecoration(
+                  //             color: Color(0xFFF94e4f9),
+                  //             borderRadius:
+                  //                 BorderRadius.all(Radius.circular(10))),
+                  //         child: Image.asset(
+                  //           "assets/images/chicken.png",
+                  //           fit: BoxFit.contain,
+                  //         ),
+                  //       ),
+                  //       SizedBox(
+                  //         width: width * 0.04,
+                  //       ),
+                  //       Column(
+                  //         crossAxisAlignment: CrossAxisAlignment.start,
+                  //         children: [
+                  //           "Chicken Drumstick".text.bold.make(),
+                  //           SizedBox(
+                  //             height: height * 0.01,
+                  //           ),
+                  //           "Pieces 5-7".text.semiBold.make(),
+                  //           SizedBox(
+                  //             height: height * 0.02,
+                  //           ),
+                  //           "Ordered 2 days ago".text.tight.teal500.make(),
+                  //         ],
+                  //       )
+                  //     ],
+                  //   )),
+                  //   SizedBox(
+                  //     width: width * 0.06,
+                  //   ),
+                  //   Container(
+                  //       child: Row(
+                  //     children: [
+                  //       Container(
+                  //         width: width * 0.2,
+                  //         height: height * 0.1,
+                  //         decoration: BoxDecoration(
+                  //             color: Color(0xFFF94e4f9),
+                  //             borderRadius:
+                  //                 BorderRadius.all(Radius.circular(10))),
+                  //         child: Image.asset(
+                  //           "assets/images/chicken.png",
+                  //           fit: BoxFit.contain,
+                  //         ),
+                  //       ),
+                  //       SizedBox(
+                  //         width: width * 0.04,
+                  //       ),
+                  //       Column(
+                  //         crossAxisAlignment: CrossAxisAlignment.start,
+                  //         children: [
+                  //           "Chicken Drumstick".text.bold.make(),
+                  //           SizedBox(
+                  //             height: height * 0.01,
+                  //           ),
+                  //           "Pieces 5-7".text.semiBold.make(),
+                  //           SizedBox(
+                  //             height: height * 0.02,
+                  //           ),
+                  //           "Ordered 2 days ago".text.tight.teal500.make(),
+                  //         ],
+                  //       )
+                  //     ],
+                  //   )),
+                  //   SizedBox(
+                  //     width: width * 0.06,
+                  //   ),
+                  //   Container(
+                  //       child: Row(
+                  //     children: [
+                  //       Container(
+                  //         width: width * 0.2,
+                  //         height: height * 0.1,
+                  //         decoration: BoxDecoration(
+                  //             color: Color(0xFFF94e4f9),
+                  //             borderRadius:
+                  //                 BorderRadius.all(Radius.circular(10))),
+                  //         child: Image.asset(
+                  //           "assets/images/chicken.png",
+                  //           fit: BoxFit.contain,
+                  //         ),
+                  //       ),
+                  //       SizedBox(
+                  //         width: width * 0.04,
+                  //       ),
+                  //       Column(
+                  //         crossAxisAlignment: CrossAxisAlignment.start,
+                  //         children: [
+                  //           "Chicken Drumstick".text.bold.make(),
+                  //           SizedBox(
+                  //             height: height * 0.01,
+                  //           ),
+                  //           "Pieces 5-7".text.semiBold.make(),
+                  //           SizedBox(
+                  //             height: height * 0.02,
+                  //           ),
+                  //           "Ordered 2 days ago".text.tight.teal500.make(),
+                  //         ],
+                  //       )
+                  //     ],
+                  //   )),
+                  // ]).scrollHorizontal(),
                       SizedBox(
                           height : height * 0.05,
                         ),

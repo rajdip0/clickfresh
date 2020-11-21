@@ -1,4 +1,5 @@
 import 'package:clickfresh/Size/Size_config.dart';
+import 'package:clickfresh/screens/Auth/loginScreen.dart';
 import 'package:clickfresh/screens/core/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
             return GetMaterialApp(
                 debugShowCheckedModeBanner: false,
                 title: 'ClickFresh',
-                home: HomeScreen());
+                home: HomeView());
           },
         );
       },
