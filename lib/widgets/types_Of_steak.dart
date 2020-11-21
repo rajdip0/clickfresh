@@ -21,11 +21,11 @@ class _TypesOfSteaks extends State<TypesOfSteaks> {
           padding: EdgeInsets.symmetric(horizontal: 15.0),
           child: Text(
             widget.title,
-            style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w500),
+            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w500),
           ),
         ),
         SizedBox(
-          height: 10.0,
+          height: height*0.03,
         ),
         _itemBuilder('Chicken Drumstick', "540", "120",
             "assets/images/delish-190808-baked-drumsticks-0185-landscape-pf-1567089281.jpg"),

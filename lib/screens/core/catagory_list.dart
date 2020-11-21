@@ -6,11 +6,12 @@ import 'package:velocity_x/velocity_x.dart';
 class CatagoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Color(0xFFfcbe03),
+      var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
+    return Scaffold(
+        backgroundColor: Colors.orange[300],
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(60.0),
+          preferredSize: Size.fromHeight(70.0),
           child: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0.0,
@@ -45,8 +46,8 @@ class CatagoryScreen extends StatelessWidget {
           child: ListView(
             children: <Widget>[
               Container(
-                  height: 100.0,
-                  width: 40.0,
+                  height: height*0.14,
+                  // width: 40.0,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
@@ -57,7 +58,7 @@ class CatagoryScreen extends StatelessWidget {
                     ],
                   )),
               SizedBox(
-                height: 20.0,
+                height: height*0.02,
               ),
               TypesOfSteaks(
                 title: "16 types of Steaks",
@@ -65,8 +66,8 @@ class CatagoryScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
+      );
+
   }
 
   _buildListItem(String delinfo, String ddetails, String imgPath) {
